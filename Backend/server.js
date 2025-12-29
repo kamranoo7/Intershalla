@@ -28,7 +28,7 @@ app.get('/api/articles', async (req, res) => {
     res.json(articles);
 });
 
-app.post('/api/articles', async (req, res) => {
+app.post('/api/articlespost', async (req, res) => {
     const newArticle = new Article(req.body);
     await newArticle.save();
     res.json(newArticle);
@@ -36,7 +36,7 @@ app.post('/api/articles', async (req, res) => {
 
 // CHANGE 2: Refine the PUT API
 // This is what your Phase 2 script calls to "Publish" the new article
-app.put('/api/articles/:id', async (req, res) => {
+app.put('/api/articlesupdate/:id', async (req, res) => {
     try {
         const updated = await Article.findByIdAndUpdate(
             req.params.id, 
@@ -49,7 +49,7 @@ app.put('/api/articles/:id', async (req, res) => {
     }
 });
 
-app.delete('/api/articles/:id', async (req, res) => {
+app.delete('/api/articlesdelete/:id', async (req, res) => {
     await Article.findByIdAndDelete(req.params.id);
     res.json({ message: "Deleted" });
 });
