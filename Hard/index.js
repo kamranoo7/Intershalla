@@ -7,7 +7,7 @@ import 'dotenv/config';
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
-const CRUD_API_BASE_URL = 'http://localhost:5000/api/articles'; 
+const CRUD_API_BASE_URL = 'https://intershalla-3.onrender.com/api/articles'; 
 const SEARCH_API_URL = 'https://serpapi.com/search.json';
 
 async function processArticles() {
