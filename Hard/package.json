@@ -1,0 +1,12 @@
+{
+  "name": "hard-task",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.x.x",
+    "cheerio": "^1.x.x",
+    "dotenv": "^16.x.x",
+    "openai": "^4.x.x"
+  }
+}
